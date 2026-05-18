@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-brand-cream text-primary-dark antialiased;
+  }
+  
+  ::selection {
+    @apply bg-accent-green text-primary-dark;
+  }
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-brand-cream;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-dark/20 rounded-full border-2 border-brand-cream;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-dark/40;
+}
